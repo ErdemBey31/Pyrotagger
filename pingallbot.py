@@ -1,8 +1,6 @@
-#Copyright ©️ 2022 TeLe TiPs. All Rights Reserved
-#You are free to use this code in any of your project, but you MUST include the following in your README.md (Copy & paste)
-# ##Credits - [Ping All Telegram bot by TeLe TiPs] (https://github.com/teletips/PingAllBot-teletips)
-
-# Changing the code is not allowed! Read GNU AFFERO GENERAL PUBLIC LICENSE: https://github.com/teletips/PingAllBot-teletips/blob/main/LICENSE
+#Telif hakkı ©️ 2023 TeLe TiPs. Her hakkı saklıdır
+#Bu kodu herhangi bir projenizde kullanmakta özgürsünüz, ancak aşağıdakileri README.md dosyanıza eklemeniz GEREKİR (Kopyala ve yapıştır)
+# Kodu değiştirmek yasaktır! GNU AFFERO GENEL KAMU LİSANSINI okuyun: https://github.com/teletips/PingAllBot-teletips/blob/main/LICENSE
 
 from pyrogram import Client, filters
 from pyrogram.types import Message
