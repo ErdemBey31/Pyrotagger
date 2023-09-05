@@ -1,6 +1,6 @@
-<h1 align= center>PingAllBot - TeLeTiPs</h1>
+<h1 align= center>PyroTaggerBot</h1>
 <h3 align = center>Sohbette tüm üyelerden bahsederek herkesin dikkatini çeken güçlü Telegram botu.
-<br>PingAll botunun bazı ek harika özellikleri vardır ve ayrıca kanallarda da çalışabilir.
+<br>PyroTagger botunun bazı ek harika özellikleri vardır ve ayrıca kanallarda da çalışabilir.
     
 <br>💥 Kolay ⚡️ Hızlı ✨ Kendiliğinden Açılabilir</h3>
 
@@ -66,9 +66,7 @@
     
 ## ⭐️ Krediler
   
-- [TeLe TiPs](https://github.com/teletips)
-- [Thakshaka](https://t.me/thakshakar)
-- [Pyrogram](https://github.com/pyrogram/pyrogram)
+- [ErdemBey31](https://github.com/erdembey31)
 
 
 ## 🚨 Uyarı
@@ -76,14 +74,7 @@
 - Kodun değiştirilmesine İZİN VERİLMEZ!
 - Herkesin bu çalışmayı kopyalamasına izin verilir, ancak aşağıdakileri README belgenize dahil etmeniz GEREKİR.
 
-```
-## Credits
-- [Ping All Bot by TeLe TiPs] (https://github.com/teletips/PingAllBot-TeLeTiPs)
-```
 
 
-## ⚖️ Lisans
-  
-Ping All, [GNU Affero Genel Kamu Lisansı v3.0](https://github.com/teletips/PingAllBot-TeLeTiPs/blob/main/LICENSE) kapsamında lisanslanmıştır.
 
-Telif hakkı ©️ 2023 TeLe TiPs. Her hakkı saklıdır
+
