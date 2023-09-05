@@ -1,6 +1,3 @@
-#Telif hakkı ©️ 2023 TeLe TiPs. Her hakkı saklıdır
-#Bu kodu herhangi bir projenizde kullanmakta özgürsünüz, ancak aşağıdakileri README.md dosyanıza eklemeniz GEREKİR (Kopyala ve yapıştır)
-# Kodu değiştirmek yasaktır! GNU AFFERO GENEL KAMU LİSANSINI okuyun: https://github.com/teletips/PingAllBot-teletips/blob/main/LICENSE
 
 from pyrogram import Client, filters
 from pyrogram.types import Message
