@@ -62,22 +62,16 @@
  
 ## ☁️ Dağıtım Yöntemleri
 
-### Heroku
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/teletips/PingAllBot-TeLeTiPs)
+`Kendi localinde veya suncunda aç.`
     
-### Okteto
-
-[![Develop on Okteto](https://okteto.com/develop-okteto.svg)](https://cloud.okteto.com)
-    
-## ⭐️ Credits
+## ⭐️ Krediler
   
 - [TeLe TiPs](https://github.com/teletips)
 - [Thakshaka](https://t.me/thakshakar)
 - [Pyrogram](https://github.com/pyrogram/pyrogram)
 
 
-## 🚨 Warning
+## 🚨 Uyarı
 
 - Kodun değiştirilmesine İZİN VERİLMEZ!
 - Herkesin bu çalışmayı kopyalamasına izin verilir, ancak aşağıdakileri README belgenize dahil etmeniz GEREKİR.
@@ -88,7 +82,7 @@
 ```
 
 
-## ⚖️ License
+## ⚖️ Lisans
   
 Ping All, [GNU Affero Genel Kamu Lisansı v3.0](https://github.com/teletips/PingAllBot-TeLeTiPs/blob/main/LICENSE) kapsamında lisanslanmıştır.
 
