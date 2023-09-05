@@ -30,7 +30,7 @@
 
 1. `API_ID` : Telegram API_ID'si, my.telegram.org/apps adresinden alın
 2. `API_HASH` : Telegram API_HASH'si, my.telegram.org/apps adresinden alın
-3. `BOT_TOKEN` : Geçerli bir Telegram Bot Tokenı, @Botfather'dan alın
+3. `BOT_TOKEN` : Geçerli bir Telegram Bot Tokeni, @Botfather'dan alın
 
 
 ## 📄 Commands
