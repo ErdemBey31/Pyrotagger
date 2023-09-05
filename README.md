@@ -6,7 +6,7 @@
 
 
 <p align="center">
-<a href="https://python.org"><img src="http://forthebadge.com/images/badges/made-with-python.svg" alt="made-with-python"></a>
+<a href="https://python.org"><img src="http://forthebadge.com/images/badges/made-with-python.svg" alt="Python-ile-gelistirildi"></a>
 <br>
     <img src="https://img.shields.io/github/stars/teletips/PingAllBot-TeLeTiPs?style=for-the-badge" alt="Stars">
     <img src="https://img.shields.io/github/forks/teletips/PingAllBot-TeLeTiPs?style=for-the-badge" alt="Forks">
