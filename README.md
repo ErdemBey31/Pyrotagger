@@ -29,7 +29,7 @@
 ## ⚒ Config Vars
 
 1. `API_ID` : Telegram API_ID'si, my.telegram.org/apps adresinden alın
-2. `API_HASH` : Telegram API_ID'si, my.telegram.org/apps adresinden alın
+2. `API_HASH` : Telegram API_HASH'si, my.telegram.org/apps adresinden alın
 3. `BOT_TOKEN` : Geçerli bir Telegram Bot Tokenı, @Botfather'dan alın
 
 
@@ -45,7 +45,7 @@
     
 ### 👻 remove , clean
 
-- To remove all deleted accounts from the chat.
+- Silinen tüm hesapları sohbetten kaldırmak için.
 
 ### 👮🏻 admins , staff
 
@@ -90,6 +90,6 @@
 
 ## ⚖️ License
   
-Ping All is licensed under the [GNU Affero General Public License v3.0](https://github.com/teletips/PingAllBot-TeLeTiPs/blob/main/LICENSE)
+Ping All, [GNU Affero Genel Kamu Lisansı v3.0](https://github.com/teletips/PingAllBot-TeLeTiPs/blob/main/LICENSE) kapsamında lisanslanmıştır.
 
-Copyright ©️ 2022 TeLe TiPs. All Rights Reserved
+Telif hakkı ©️ 2023 TeLe TiPs. Her hakkı saklıdır
