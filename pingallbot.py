@@ -32,10 +32,10 @@ async def everyone(client, message):
       has_permissions = message.sender_chat  
     if has_permissions:
       if len(chatQueue) > 5:
-        await message.reply("⛔️ | I'm already working on my maximum number of 5 chats at the moment. Please try again shortly.")
+        await message.reply("⛔️ | Şu anda maksimum 5 sohbetim üzerinde çalışıyorum. Lütfen kısa süre sonra tekrar deneyin.")
       else:  
         if message.chat.id in chatQueue:
-          await message.reply("🚫 | There's already an ongoing process in this chat. Please /stop to start a new one.")
+          await message.reply("🚫 | Bu sohbette zaten devam eden bir süreç var. Yeni bir tane başlatmak için lütfen /stop.)
         else:  
           chatQueue.append(message.chat.id)
           if len(message.command) > 1:
@@ -78,9 +78,9 @@ async def everyone(client, message):
                 pass  
               i = i+j
           if i == lenMembersList:    
-            await message.reply(f"✅ | Successfully mentioned **total number of {i} members**.\n❌ | Bots and deleted accounts were rejected.") 
+            await message.reply(f"✅ | Başarıyla bahsedildi **toplam {i} üye sayısı**.\n❌ | Botlar ve silinen hesaplar reddedildi.") 
           else:
-            await message.reply(f"✅ | Successfully mentioned **{i} members.**\n❌ | Bots and deleted accounts were rejected.")    
+            await message.reply(f"✅ | **{i} üyeden başarıyla bahsedildi.**\n❌ | Botlar ve silinen hesaplar reddedildi."    
           chatQueue.remove(message.chat.id)
     else:
       await message.reply("👮🏻 | Sorry, **only admins** can execute this command.")  
@@ -99,13 +99,13 @@ async def remove(client, message):
     if has_permissions:
       bot = await teletips.get_chat_member(message.chat.id, "self")
       if bot.status == ChatMemberStatus.MEMBER:
-        await message.reply("🕹 | I need admin permissions to remove deleted accounts.")  
+        await message.reply("🕹 | Silinen hesapları kaldırmak için yönetici izinlerine ihtiyacım var.")  
       else:  
         if len(chatQueue) > 5 :
-          await message.reply("⛔️ | I'm already working on my maximum number of 5 chats at the moment. Please try again shortly.")
+          await message.reply("⛔️ | Şu anda maksimum 5 sohbetim üzerinde çalışıyorum. Lütfen kısa süre sonra tekrar deneyin.")
         else:  
           if message.chat.id in chatQueue:
-            await message.reply("🚫 | There's already an ongoing process in this chat. Please /stop to start a new one.")
+            await message.reply("🚫 | Bu sohbette zaten devam eden bir süreç var. Yeni bir tane başlatmak için lütfen /stop")
           else:  
             chatQueue.append(message.chat.id)  
             deletedList = []
@@ -116,12 +116,12 @@ async def remove(client, message):
                 pass
             lenDeletedList = len(deletedList)  
             if lenDeletedList == 0:
-              await message.reply("👻 | No deleted accounts in this chat.")
+              await message.reply("👻 | Bu sohbette silinmiş hesap yok.")
               chatQueue.remove(message.chat.id)
             else:
               k = 0
               processTime = lenDeletedList*10
-              temp = await teletips.send_message(message.chat.id, f"🚨 | Total of {lenDeletedList} deleted accounts has been detected.\n⏳ | Estimated time: {processTime} seconds from now.")
+              temp = await teletips.send_message(message.chat.id, f"🚨 | Toplam {lenDeletedList} silinmiş hesap tespit edildi.\n⏳ | Tahmini süre: {processTime} saniye sonra.")
               if stopProcess: stopProcess = False
               while len(deletedList) > 0 and not stopProcess:   
                 deletedAccount = deletedList.pop(0)
@@ -132,14 +132,14 @@ async def remove(client, message):
                 k+=1
                 await asyncio.sleep(10)
               if k == lenDeletedList:  
-                await message.reply(f"✅ | Successfully removed all deleted accounts from this chat.")  
+                await message.reply(f"✅ | Silinen tüm hesaplar bu sohbetten başarıyla kaldırıldı.")  
                 await temp.delete()
               else:
-                await message.reply(f"✅ | Successfully removed {k} deleted accounts from this chat.")  
+                await message.reply(f"✅ | {k} silinmiş hesap bu sohbetten başarıyla kaldırıldı.")  
                 await temp.delete()  
               chatQueue.remove(message.chat.id)
     else:
-      await message.reply("👮🏻 | Sorry, **only admins** can execute this command.")  
+      await message.reply("👮🏻 | Üzgünüz, **yalnızca yöneticiler** bu komutu çalıştırabilir.")  
   except FloodWait as e:
     await asyncio.sleep(e.value)                               
         
@@ -154,12 +154,12 @@ async def stop(client, message):
       has_permissions = message.sender_chat  
     if has_permissions:
       if not message.chat.id in chatQueue:
-        await message.reply("🤷🏻‍♀️ | There is no ongoing process to stop.")
+        await message.reply("🤷🏻‍♀️ | Durdurulacak devam eden bir süreç yok.")
       else:
         stopProcess = True
-        await message.reply("🛑 | Stopped.")
+        await message.reply("🛑 | Durdu.")
     else:
-      await message.reply("👮🏻 | Sorry, **only admins** can execute this command.")
+      await message.reply("👮🏻 | Üzgünüz, **yalnızca yöneticiler** bu komutu çalıştırabilir.")
   except FloodWait as e:
     await asyncio.sleep(e.value)
 
@@ -183,13 +183,13 @@ async def admins(client, message):
     try:
       owner = ownerList[0]
       if owner.username == None:
-        text2 += f"👑 Owner\n└ {owner.mention}\n\n👮🏻 Admins\n"
+        text2 += f"👑 Sahip\n└ {owner.mention}\n\n👮🏻 Admins\n"
       else:
-        text2 += f"👑 Owner\n└ @{owner.username}\n\n👮🏻 Admins\n"
+        text2 += f"👑 Sahip\n└ @{owner.username}\n\n👮🏻 Admins\n"
     except:
-      text2 += f"👑 Owner\n└ <i>Hidden</i>\n\n👮🏻 Admins\n"
+      text2 += f"👑 Sahip\n└ <i>Hidden</i>\n\n👮🏻 Admins\n"
     if len(adminList) == 0:
-      text2 += "└ <i>Admins are hidden</i>"  
+      text2 += "└ <i>Yöneticiler gizlendi</i>"  
       await teletips.send_message(message.chat.id, text2)   
     else:  
       while len(adminList) > 1:
@@ -204,7 +204,7 @@ async def admins(client, message):
           text2 += f"└ {admin.mention}\n\n"
         else:
           text2 += f"└ @{admin.username}\n\n"
-      text2 += f"✅ | **Total number of admins**: {lenAdminList}\n❌ | Bots and hidden admins were rejected."  
+      text2 += f"✅ | **Toplam yönetici sayısı**: {lenAdminList}\n❌ | Botlar ve gizli yöneticiler reddedildi."  
       await teletips.send_message(message.chat.id, text2)           
   except FloodWait as e:
     await asyncio.sleep(e.value)       
@@ -216,14 +216,14 @@ async def bots(client, message):
     async for bot in teletips.get_chat_members(message.chat.id, filter=enums.ChatMembersFilter.BOTS):
       botList.append(bot.user)
     lenBotList = len(botList) 
-    text3  = f"**BOT LIST - {message.chat.title}**\n\n🤖 Bots\n"
+    text3  = f"**BOT LİSTESİ - {message.chat.title}**\n\n🤖 Botlar\n"
     while len(botList) > 1:
       bot = botList.pop(0)
       text3 += f"├ @{bot.username}\n"    
     else:    
       bot = botList.pop(0)
       text3 += f"└ @{bot.username}\n\n"
-      text3 += f"✅ | **Total number of bots**: {lenBotList}"  
+      text3 += f"✅ | **Toplam bot sayısı**: {lenBotList}"  
       await teletips.send_message(message.chat.id, text3)
   except FloodWait as e:
     await asyncio.sleep(e.value)
@@ -231,14 +231,14 @@ async def bots(client, message):
 @teletips.on_message(filters.command("start") & filters.private)
 async def start(client, message):
   text = f'''
-Heya {message.from_user.mention},
-My name is **PingAll**. I'm here to help you to get everyone's attention by mentioning all members in your chat.
+  Merhaba, {message.from_user.mention},
+Adım **Pyro Tagger**. Sohbetinizde tüm üyelerden bahsederek herkesin dikkatini çekmenize yardımcı olmak için buradayım.
 
-I have some additional cool features and also I can work in channels.
+Bazı harika özelliklerim var ve ayrıca kanallarda çalışabiliyorum.
 
-Don't forget to join my [channel](http://t.me/teletipsofficialchannel) to recieve information on all the latest updates.
+En son güncellemeler hakkında bilgi almak için [kanalıma](http://t.me/pyrotagger) katılmayı unutmayın.
 
-Hit /help to find out my commands and the use of them.
+Komutlarımı ve bunların kullanımını öğrenmek için /help tuşuna basın.
 '''
   await teletips.send_message(message.chat.id, text, disable_web_page_preview=True)
 
@@ -246,20 +246,20 @@ Hit /help to find out my commands and the use of them.
 @teletips.on_message(filters.command("help"))
 async def help(client, message):
   text = '''
-Hey, let's have a quick look at my commands.
+Hey, hadi komutlarıma hızlıca bir göz atalım.
 
-**Commands**:
-- /ping "input": <i>Mention all members.</i>
-- /remove: <i>Remove all deleted accounts.</i>
-- /admins: <i>Mention all admins.</i>
-- /bots: <i>Get the full bot list.</i>
-- /stop: <i>Stop an on going process.</i>
+**Komutlar**:
+- /ping "giriş": <i>Tüm üyelerden bahsedin.</i>
+- /remove: <i>Silinen tüm hesapları kaldırın.</i>
+- /admins: <i>Tüm yöneticilerden bahsedin.</i>
+- /bots: <i>Bot listesinin tamamını alın.</i>
+- /stop: <i>Devam eden bir süreci durdurun.</i>
 
-If you have any questions on how to use me, feel free to ask in my [support group](https://t.me/teletipsofficialontopicchat). More on my [page](https://github.com/teletips/PingAllBot-TeLeTiPs).
+Beni nasıl kullanacağınızla ilgili sorularınız varsa [destek grubuma](https://t.me/pyrotaggerchat) sormaya çekinmeyin. 
 '''
   await teletips.send_message(message.chat.id, text, disable_web_page_preview=True)
 
-print("PingAll is alive!")  
+print("PingAll yaşıyor!")  
 teletips.run()
  
-#Copyright ©️ 2021 TeLe TiPs. All Rights Reserved 
+#Copyright ©️ 2023 TeLe TiPs. All Rights Reserved 
