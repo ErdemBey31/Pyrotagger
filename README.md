@@ -1,8 +1,8 @@
 <h1 align= center>PingAllBot - TeLeTiPs</h1>
-<h3 align = center>Powerful Telegram bot to get everyone's attention by mentioning all members in the chat.
-<br>PingAll bot has some additional cool features and also it can work in channels.
+<h3 align = center>Sohbette tüm üyelerden bahsederek herkesin dikkatini çeken güçlü Telegram botu.
+<br>PingAll botunun bazı ek harika özellikleri vardır ve ayrıca kanallarda da çalışabilir.
     
-<br>💥 Easy    ⚡️ Fast    ✨ Self Deployable</h3>
+<br>💥 Kolay ⚡️ Hızlı ✨ Kendiliğinden Açılabilir</h3>
 
 
 <p align="center">
@@ -28,16 +28,16 @@
     
 ## ⚒ Config Vars
 
-1. `API_ID` : Telegram API_ID, get it from my.telegram.org/apps
-2. `API_HASH` : Telegram API_ID, get it from my.telegram.org/apps
-3. `BOT_TOKEN` : A Valid Telegram Bot Token, get it from @Botfather
+1. `API_ID` : Telegram API_ID'si, my.telegram.org/apps adresinden alın
+2. `API_HASH` : Telegram API_ID'si, my.telegram.org/apps adresinden alın
+3. `BOT_TOKEN` : Geçerli bir Telegram Bot Tokenı, @Botfather'dan alın
 
 
 ## 📄 Commands
 
 ### 🛎 ping , all
 
-- To get everyone's attention by mentioning all members in the chat.
+- Sohbette tüm üyelerden bahsederek herkesin dikkatini çekmek.
 
 ```
 /ping <input>    
@@ -49,18 +49,18 @@
 
 ### 👮🏻 admins , staff
 
-- To mention all admins while getting the full non-anonymous admin list of the chat.
+- Sohbetin tam anonim olmayan yönetici listesini alırken tüm yöneticilerden bahsetmek için.
 
 ### 👾 bots 
 
-- To get the full bot list of the chat.
+- Sohbetin tam bot listesini almak için.
 
 ### 🛑 stop , cancel
 
-- To stop an on going process in the chat.
+- Sohbette devam eden bir işlemi durdurmak için.
  
  
-## ☁️ Deployment Methods
+## ☁️ Dağıtım Yöntemleri
 
 ### Heroku
 
@@ -79,8 +79,8 @@
 
 ## 🚨 Warning
 
-- Changing the code is NOT ALLOWED!  
-- Everyone is permitted to copy this work, but you MUST include the following in your README document.
+- Kodun değiştirilmesine İZİN VERİLMEZ!
+- Herkesin bu çalışmayı kopyalamasına izin verilir, ancak aşağıdakileri README belgenize dahil etmeniz GEREKİR.
 
 ```
 ## Credits
