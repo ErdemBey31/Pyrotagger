@@ -18,7 +18,7 @@ chatQueue = []
 
 stopProcess = False
 
-@teletips.on_message(filters.command(["ping","all"]))
+@teletips.on_message(filters.command(["tag","ping"]))
 async def everyone(client, message):
   global stopProcess
   try: 
@@ -246,7 +246,7 @@ async def help(client, message):
 Hey, hadi komutlarıma hızlıca bir göz atalım.
 
 **Komutlar**:
-- /ping "giriş": <i>Tüm üyelerden bahsedin.</i>
+- /tag "giriş": <i>Tüm üyelerden bahsedin.</i>
 - /remove: <i>Silinen tüm hesapları kaldırın.</i>
 - /admins: <i>Tüm yöneticilerden bahsedin.</i>
 - /bots: <i>Bot listesinin tamamını alın.</i>
