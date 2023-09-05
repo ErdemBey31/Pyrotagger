@@ -35,7 +35,7 @@ async def everyone(client, message):
         await message.reply("⛔️ | Şu anda maksimum 5 sohbetim üzerinde çalışıyorum. Lütfen kısa süre sonra tekrar deneyin.")
       else:  
         if message.chat.id in chatQueue:
-          await message.reply("🚫 | Bu sohbette zaten devam eden bir süreç var. Yeni bir tane başlatmak için lütfen /stop.)
+          await message.reply("🚫 | Bu sohbette zaten devam eden bir süreç var. Yeni bir tane başlatmak için lütfen /stop.")
         else:  
           chatQueue.append(message.chat.id)
           if len(message.command) > 1:
